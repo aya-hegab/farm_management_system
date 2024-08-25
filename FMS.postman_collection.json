@@ -1,0 +1,1530 @@
+{
+	"info": {
+		"_postman_id": "caee3c48-891e-47af-9644-b61c44aa0f53",
+		"name": "FMS",
+		"description": "Farm Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37891874"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"aya\",\r\n    \"password\": \"aya123\",\r\n    \"phone_number\": \"01000000\",\r\n    \"address\": \"123 SH Cairo\",\r\n    \"email\": \"aya@aya.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				},
+				"description": "Fields are required:\n\n- email\n    \n- password\n    \n- phone_number\n    \n- address\n    \n- username"
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"aya\",\r\n    \"password\": \"aya123\",\r\n    \"phone_number\": \"01000000\",\r\n    \"address\": \"123 SH Cairo\",\r\n    \"email\": \"aya@aya.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/register/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 23:36:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"aya\",\n    \"email\": \"aya@aya.com\",\n    \"phone_number\": \"01000000\",\n    \"address\": \"123 SH Cairo\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"aya\",\r\n    \"password\": \"aya123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				},
+				"description": "JWT authentication using djangorestframework-simplejwt"
+			},
+			"response": [
+				{
+					"name": "User Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"aya\",\r\n    \"password\": \"aya123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 22:39:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "483"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNDYyNTU4MywiaWF0IjoxNzI0NTM5MTgzLCJqdGkiOiI4N2E1MWE2YTY0ZWQ0MWQwOGIzYTI4OTEwMzE0MmM1NiIsInVzZXJfaWQiOjF9.fPALBRLmttUIOiLfe-_TIIV9hT-4ccH31b51H3Nf_jc\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTM5NDgzLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjA0YTY1NGI2M2U3MDQ4YjBhYWQxYWE5ZTRhN2FhNjkwIiwidXNlcl9pZCI6MX0.UsaN83daPGlcuMiB59yOkG33qKKEgM3GdrLWeCZSWck\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Refresh the token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTM5NDgzLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjA0YTY1NGI2M2U3MDQ4YjBhYWQxYWE5ZTRhN2FhNjkwIiwidXNlcl9pZCI6MX0.UsaN83daPGlcuMiB59yOkG33qKKEgM3GdrLWeCZSWck",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNDYyNTU4MywiaWF0IjoxNzI0NTM5MTgzLCJqdGkiOiI4N2E1MWE2YTY0ZWQ0MWQwOGIzYTI4OTEwMzE0MmM1NiIsInVzZXJfaWQiOjF9.fPALBRLmttUIOiLfe-_TIIV9hT-4ccH31b51H3Nf_jc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/token/refresh/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Refresh the token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTM5NDgzLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjA0YTY1NGI2M2U3MDQ4YjBhYWQxYWE5ZTRhN2FhNjkwIiwidXNlcl9pZCI6MX0.UsaN83daPGlcuMiB59yOkG33qKKEgM3GdrLWeCZSWck",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNDYyNTU4MywiaWF0IjoxNzI0NTM5MTgzLCJqdGkiOiI4N2E1MWE2YTY0ZWQ0MWQwOGIzYTI4OTEwMzE0MmM1NiIsInVzZXJfaWQiOjF9.fPALBRLmttUIOiLfe-_TIIV9hT-4ccH31b51H3Nf_jc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 22:52:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "241"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQwMjc1LCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjE4YjEyNDgyNzAzMTQwOGFhZTY2NmQ0OTI2NjQzOTA4IiwidXNlcl9pZCI6MX0.BKQ2DLrNPuspM5xBmbeLUuNVtVDCU9hP55y0j75KBQA\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Refresh the token Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTM5NDgzLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjA0YTY1NGI2M2U3MDQ4YjBhYWQxYWE5ZTRhN2FhNjkwIiwidXNlcl9pZCI6MX0.UsaN83daPGlcuMiB59yOkG33qKKEgM3GdrLWeCZSWck",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNDYyNTU4MywiaWF0IjoxNzI0NTM5MTgzLCJqdGkiOiI4N2E1MWE2YTY0ZWQ0MWQwOGIzYTI4OTEwMzE0MmM1NiIsInVzZXJfaWQiOjF9.fPALBRLmttUIOiLfe-_TIIV9hT-4ccH31b51H3Nf_jc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/token/refresh/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Refresh the token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTM5NDgzLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjA0YTY1NGI2M2U3MDQ4YjBhYWQxYWE5ZTRhN2FhNjkwIiwidXNlcl9pZCI6MX0.UsaN83daPGlcuMiB59yOkG33qKKEgM3GdrLWeCZSWck",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNDYyNTU4MywiaWF0IjoxNzI0NTM5MTgzLCJqdGkiOiI4N2E1MWE2YTY0ZWQ0MWQwOGIzYTI4OTEwMzE0MmM1NiIsInVzZXJfaWQiOjF9.fPALBRLmttUIOiLfe-_TIIV9hT-4ccH31b51H3Nf_jc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 22:52:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "241"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQwMjc1LCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjE4YjEyNDgyNzAzMTQwOGFhZTY2NmQ0OTI2NjQzOTA4IiwidXNlcl9pZCI6MX0.BKQ2DLrNPuspM5xBmbeLUuNVtVDCU9hP55y0j75KBQA\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQwMjc1LCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjE4YjEyNDgyNzAzMTQwOGFhZTY2NmQ0OTI2NjQzOTA4IiwidXNlcl9pZCI6MX0.BKQ2DLrNPuspM5xBmbeLUuNVtVDCU9hP55y0j75KBQA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a farm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQwOTc3LCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjYwOGZkYzE0YjQ0MjQzMTliYTYzYzMzMDZjODM4MzUyIiwidXNlcl9pZCI6MX0.9sIUN6PwnxDF47rhediQiwzbK8fAv4aZ2SuE4dVckLU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"farm1\",\r\n    \"location\": \"cairo\",\r\n    \"size\": 100,\r\n    \"owner\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/farms/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"farms",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add a farm",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQwOTc3LCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjYwOGZkYzE0YjQ0MjQzMTliYTYzYzMzMDZjODM4MzUyIiwidXNlcl9pZCI6MX0.9sIUN6PwnxDF47rhediQiwzbK8fAv4aZ2SuE4dVckLU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"farm1\",\r\n    \"location\": \"cairo\",\r\n    \"size\": 100,\r\n    \"owner\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/farms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"farms",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 23:09:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"farm1\",\n    \"location\": \"cairo\",\n    \"size\": 100,\n    \"owner\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "edit a farm",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQxNDMyLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjlhMjRlYzY5MTFiZDQyNWM5MWM0MDk2ZWI1MTQyYzE1IiwidXNlcl9pZCI6MX0.ttws6ugkPrBRcPcQ9m3WLV6jPdogMNUzPfsloQEerpw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"farm2\",\r\n    \"location\": \"cairo\",\r\n    \"size\": 100,\r\n    \"owner\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/farms/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"farms",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit a farm",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQxNDMyLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjlhMjRlYzY5MTFiZDQyNWM5MWM0MDk2ZWI1MTQyYzE1IiwidXNlcl9pZCI6MX0.ttws6ugkPrBRcPcQ9m3WLV6jPdogMNUzPfsloQEerpw",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"farm2\",\r\n    \"location\": \"cairo\",\r\n    \"size\": 100,\r\n    \"owner\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/farms/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"farms",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 23:15:37 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"farm2\",\n    \"location\": \"cairo\",\n    \"size\": 100,\n    \"owner\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "get a farm",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQxOTg4LCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6ImZjMGRmN2E3OGViMzQzMDY4ZmI5ZmMyNjMwOWM3YWUxIiwidXNlcl9pZCI6MX0.Rvz9TqgOJXcMUvKA8Uq3JXLoM3inbFFjhJ2DIEsQFUM",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/farms/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"farms",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "view a farm",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQxNzUzLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjJiNTkzOTU0YzU4ZjQzNzRiYzdkOWM1ODcyYzQwYmU4IiwidXNlcl9pZCI6MX0.IhaYRc_VbTU7SE1BUpCWp8BMmv6AfCqSAZSIKdK2eXQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/farms/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"farms",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 23:17:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"farm2\",\n    \"location\": \"cairo\",\n    \"size\": 100,\n    \"owner\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "delete farm",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQzOTk5LCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6ImFhOGYwOTJlOTYyNDRkMjc4ODAwOWNjNTg3MmU0OWI5IiwidXNlcl9pZCI6MX0.bFDJF-51tYmbRWlEe0X3RUKCWvJfp1qjJLTWxvB5DSU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/farms/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"farms",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ceate animal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQyOTg3LCJpYXQiOjE3MjQ1NDI1ODgsImp0aSI6IjQ1Yjc3NmI5MjYzMzRkMzA5MTI4YmZjYTA4NTBmMDAxIiwidXNlcl9pZCI6MX0.2AXFO124VTKB9WfgCJ8hkvIHp7_L_I7DHrllTUT0mwI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bessie\",\r\n    \"species\": \"Cow\",\r\n    \"birth_date\": \"2021-01-01\",\r\n    \"farm\": 1,\r\n    \"owner\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/animals/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animals",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ceate animal",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQyOTg3LCJpYXQiOjE3MjQ1NDI1ODgsImp0aSI6IjQ1Yjc3NmI5MjYzMzRkMzA5MTI4YmZjYTA4NTBmMDAxIiwidXNlcl9pZCI6MX0.2AXFO124VTKB9WfgCJ8hkvIHp7_L_I7DHrllTUT0mwI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bessie\",\r\n    \"species\": \"Cow\",\r\n    \"birth_date\": \"2021-01-01\",\r\n    \"farm\": 1,\r\n    \"owner\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/animals/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"animals",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 23:38:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Bessie\",\n    \"species\": \"Cow\",\n    \"birth_date\": \"2021-01-01\",\n    \"farm\": 1,\n    \"owner\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "edit animal",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQzMDUyLCJpYXQiOjE3MjQ1NDI1ODgsImp0aSI6ImQ4OTMzZmQ2MmFjODRiODE5NjI0NWI3N2NmN2E4N2YzIiwidXNlcl9pZCI6MX0.-sjl6nOAvv_NTzIF3EEqAfPkQlFRkornhikQr7ssA-c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bessie333333\",\r\n    \"species\": \"Cow\",\r\n    \"birth_date\": \"2021-01-01\",\r\n    \"farm\": 1,\r\n    \"owner\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/animals/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animals",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit animal",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQzMDUyLCJpYXQiOjE3MjQ1NDI1ODgsImp0aSI6ImQ4OTMzZmQ2MmFjODRiODE5NjI0NWI3N2NmN2E4N2YzIiwidXNlcl9pZCI6MX0.-sjl6nOAvv_NTzIF3EEqAfPkQlFRkornhikQr7ssA-c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bessie333333\",\r\n    \"species\": \"Cow\",\r\n    \"birth_date\": \"2021-01-01\",\r\n    \"farm\": 1,\r\n    \"owner\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/animals/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"animals",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 23:40:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Bessie333333\",\n    \"species\": \"Cow\",\n    \"birth_date\": \"2021-01-01\",\n    \"farm\": 1,\n    \"owner\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "delete animal",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQzODk3LCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjE5MDU4NDQxNzUwNTQ2NzI4NzBmYTExZTgxMGQ5YzM4IiwidXNlcl9pZCI6MX0.4xNalSsq7RqoRu4U3KuGh7BppctQa7134pH7KsLXR_c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/animals/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animals",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add crop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQzNTUxLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjMwMDY4Njk3ZmUwZDQ3YmQ4NTk5N2I5NGIxNDA2Zjc0IiwidXNlcl9pZCI6MX0.YA1u_Zk6ntUc7bOmzoS7_nIs8Gulb3ZGiz_4y5Gv5M8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Corn\",\r\n    \"type\": \"Vegetable\",\r\n    \"planting_date\": \"2024-04-01\",\r\n    \"harvest_date\": \"2024-09-01\",\r\n    \"farm\": 1,\r\n    \"owner\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/crops/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"crops",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add crop",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQzNTUxLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjMwMDY4Njk3ZmUwZDQ3YmQ4NTk5N2I5NGIxNDA2Zjc0IiwidXNlcl9pZCI6MX0.YA1u_Zk6ntUc7bOmzoS7_nIs8Gulb3ZGiz_4y5Gv5M8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Corn\",\r\n    \"type\": \"Vegetable\",\r\n    \"planting_date\": \"2024-04-01\",\r\n    \"harvest_date\": \"2024-09-01\",\r\n    \"farm\": 1,\r\n    \"owner\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/crops/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crops",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 23:47:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "117"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Corn\",\n    \"type\": \"Vegetable\",\n    \"planting_date\": \"2024-04-01\",\n    \"harvest_date\": \"2024-09-01\",\n    \"farm\": 1,\n    \"owner\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "edit a crop",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQzNzEwLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6ImQ0MzNhMzhmZjU0ZTRiZGNiNDM2ZDJiNDJlOGU0YmE4IiwidXNlcl9pZCI6MX0.dorvQ_PxBHSr1WXi_kuhQgJkvJpM3_QjtJQjLTb0ebY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Corn3333333333333333\",\r\n    \"type\": \"Vegetable\",\r\n    \"planting_date\": \"2024-04-01\",\r\n    \"harvest_date\": \"2024-09-01\",\r\n    \"farm\": 1,\r\n    \"owner\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/crops/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"crops",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit a crop",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQzNzEwLCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6ImQ0MzNhMzhmZjU0ZTRiZGNiNDM2ZDJiNDJlOGU0YmE4IiwidXNlcl9pZCI6MX0.dorvQ_PxBHSr1WXi_kuhQgJkvJpM3_QjtJQjLTb0ebY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Corn3333333333333333\",\r\n    \"type\": \"Vegetable\",\r\n    \"planting_date\": \"2024-04-01\",\r\n    \"harvest_date\": \"2024-09-01\",\r\n    \"farm\": 1,\r\n    \"owner\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/crops/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crops",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Aug 2024 23:50:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Corn3333333333333333\",\n    \"type\": \"Vegetable\",\n    \"planting_date\": \"2024-04-01\",\n    \"harvest_date\": \"2024-09-01\",\n    \"farm\": 1,\n    \"owner\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "delete a crop Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0NTQzODA0LCJpYXQiOjE3MjQ1MzkxODMsImp0aSI6IjUzZWNjODY4Y2E2NjRiZWJhNGM1ODA2NGVjYzZjMTRiIiwidXNlcl9pZCI6MX0.4jXeGvmjnLuYeRCrXI48kIX1kmuhssWuhCMchSHe3gU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/crops/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"crops",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
